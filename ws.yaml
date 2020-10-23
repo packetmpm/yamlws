@@ -1,0 +1,17 @@
+---
+foo:
+  podAnnotations:
+    rabbitmq.init_configs: '[{}]'
+    rabbitmq.check_names: '["rabbitmq"]'
+    rabbitmq.instances: |
+      [
+        {"rabbitmq_api_url":"%%host%%:15672/api/","username": "packet", "password": "%%env_RABBITMQ_PASSWORD%%"} 
+      ]
+bar:
+  podAnnotations:
+    rabbitmq.init_configs: '[{}]'
+    rabbitmq.check_names: '["rabbitmq"]'
+    rabbitmq.instances: |
+      [
+        {"rabbitmq_api_url":"%%host%%:15672/api/","username": "packet", "password": "%%env_RABBITMQ_PASSWORD%%"}
+      ]
